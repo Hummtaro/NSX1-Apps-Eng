@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ポケミクアプリ01 [Preset]</title>
+    <title>Pocket Miku Lyric Editor</title>
     <link rel="stylesheet" type="text/css" href="css/main-lyrics.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/sticky-footer-navbar-lyrics.css">
@@ -17,16 +17,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">ポケミクアプリ01 [Preset]</a>
+            <a class="navbar-brand" href="#">Pocket Miku Lyric Editor</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="dropdown">
-                <a data-toggle="modal" href="#midiInSelM" class="midiInSelM"><span class="glyphicon glyphicon-cog"></span> ポケット・ミクと接続</a>
+                <a data-toggle="modal" href="#midiInSelM" class="midiInSelM"><span class="glyphicon glyphicon-cog"></span> Midi Connection</a>
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a data-toggle="modal" href="#showToU" id="showToUJ"><span class="glyphicon glyphicon-check"></span> エンドユーザー使用許諾契約書</a></li>
+              <li><a data-toggle="modal" href="#showToU" id="showToUJ"><span class="glyphicon glyphicon-check"></span> End User License Agreement</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -105,10 +105,10 @@
           <div id="midi_connection" class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title"><span class="glyphicon glyphicon-cog"></span> ポケット・ミクと接続</h4>
+                <h4 class="modal-title"><span class="glyphicon glyphicon-cog"></span> Midi Connection</h4>
               </div>
               <div class="modal-body">
-                <div id="divMidiInSelWarning" class="alert alert-danger" style="display:none;">ポケット・ミクを接続しブラウザを再起動してください。</div>
+                <div id="divMidiInSelWarning" class="alert alert-danger" style="display:none;">Please connect Pocket Miku and reload.</div>
                 <div id="divMidiArea" class="divInputArea midiinArea">
                   
                   <!-- input -->
@@ -126,8 +126,8 @@
                 </div><!-- /.divInputArea -->
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" id="closeSelB" data-dismiss="modal" style="visibility:hidden;">閉じる</button>
-                <button type="button" class="btn btn-primary" id="connectSelB">接続する</button>
+                <button type="button" class="btn btn-default" id="closeSelB" data-dismiss="modal" style="visibility:hidden;">Close</button>
+                <button type="button" class="btn btn-primary" id="connectSelB">Connect</button>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
@@ -138,13 +138,13 @@
           <div class="modal-dialog">
             <div class="modal-content" style="width:640px;">
               <div class="modal-header">
-                <h4 class="modal-title"><span class="glyphicon glyphicon-check"></span> エンドユーザー使用許諾契約書</h4>
+                <h4 class="modal-title"><span class="glyphicon glyphicon-check"></span> End User License Agreement</h4>
               </div>
               <div class="modal-body">
                 <textarea id="regContent" style="width:600px; height:260px; padding:13px; border:1px solid #cccccc; border-top-left-radius:10px; border-bottom-right-radius:10px; resize:none;"></textarea>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
@@ -155,16 +155,16 @@
           <div class="modal-dialog">
             <div class="modal-content" style="width:600px;">
               <div class="modal-header">
-                <h4 class="modal-title"><span class="glyphicon glyphicon-check"></span> ブラウザの設定</h4>
+                <h4 class="modal-title"><span class="glyphicon glyphicon-check"></span> Browser Settings</h4>
               </div>
               <div class="modal-body">
-              本アプリケーションを利用するためには以下の設定が必要です。
+              In order to use this application, the following settings are necessary.
                 <ul>
-                  <li>chrome://flags/#enable-web-midi を有効化</li>
+                  <li>Activate chrome://flags/#enable-web-midi</li>
                   <ol>
-                    <li>アドレスバーに <b>chrome://flags/#enable-web-midi</b> を入力</li>
-                    <li><b>Web MIDI API を有効にする</b> を有効化</li>
-                    <li>画面最下段の <button class="btn btn-default btn-xs">今すぐ再起動</button> をクリックしてブラウザを再起動</li>
+                    <li>Enter <b>chrome://flags/#enable-web-midi</b> in adress bar.</li>
+                    <li>Activate <b>Enable Web MIDI API</b>.</li>
+                    <li>Click <button class="btn btn-default btn-xs">Restart now</button> to restart browser.</li>
                     <img src="images/config_webMIDIflag.gif" style="width:400px; margin-top:10px; box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.4);">
                   </ol>
                 </ul>
@@ -178,11 +178,11 @@
           <div class="modal-dialog">
             <div class="modal-content" style="width:600px;">
               <div class="modal-header">
-                <h4 class="modal-title"><img src="images/loading_spin.gif" width="25px" style="margin:0px 4px 6px 0px;"> ポケットミクへ再接続中です。</h4>
+                <h4 class="modal-title"><img src="images/loading_spin.gif" width="25px" style="margin:0px 4px 6px 0px;"> Reconnecting to Pocket Miku..</h4>
               </div>
               <div class="modal-body">
-                <p>このダイアログは再接続が完了すると自動的に消えます。</p>
-                <p>ダイアログが消えない場合、お手数ですがポケット・ミクの再起動後にブラウザの再起動を行ってください。</p>
+                <p>This dialog disappears automatically when reconnection is completed.</p>
+                <p>f the dialog does not disappear, please restart your browser after restarting Pocket Miku.</p>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
