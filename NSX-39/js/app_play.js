@@ -567,7 +567,7 @@ function moveBlock() {
     document.querySelector("#doneEditArea").style.removeProperty("height");
     document.querySelector("#doneEditArea").className=cN+" expand-animation";
     setTimeout(function(){
-        document.querySelector("#doneEdit").innerHTML=" えんそうにもどる ";
+        document.querySelector("#doneEdit").innerHTML=" done ";
         document.querySelector("#doneEdit").style.setProperty("display", "block");
     }, 400 );
     setTimeout(function(){
@@ -580,7 +580,7 @@ function deleteBlock() {
     document.querySelector("#doneEditArea").style.removeProperty("height");
     document.querySelector("#doneEditArea").className=" expand-animation";
     setTimeout(function(){
-        document.querySelector("#doneEdit").innerHTML=" えんそうにもどる ";
+        document.querySelector("#doneEdit").innerHTML=" done ";
         document.querySelector("#doneEdit").style.setProperty("display", "block");
     }, 400 );
     setTimeout(function(){
