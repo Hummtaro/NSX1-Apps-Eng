@@ -44,9 +44,9 @@ var revoiceStatus=false;
 var btId=false;
 var imeStatus;
 var errMsg={
-  "AT_LEAST_ONE": "1文字以上入力してね",
-  "LETTER_EXCEED": "%%COUNT%%文字多いよ",
-  "NG_LETTER": "発音できない文字は確定時に削除するね"
+  "AT_LEAST_ONE": "Please enter at least 1 letter.",
+  "LETTER_EXCEED": "%%COUNT%% too many characters",
+  "NG_LETTER": "Characters that can not be pronounced are deleted when confirmed."
 };
 var touchStart=false;
 
