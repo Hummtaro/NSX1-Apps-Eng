@@ -45,7 +45,7 @@ CheckUserAgent.prototype={
                 h3.innerHTML=document.title;
 
                 var p1=document.createElement("p");
-                p1.innerHTML="お客様は Google Chrome 以外（ブラウザ）をご利用してアクセス下さっています。<br><img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\">Google Chrome（Version "+this.webmidiVersion.Chrome+"） 以降でアクセスをお願い致します。 <a href=\"http://www.google.co.jp/intl/ja/chrome/browser/\" target=\"_blank\" class=\"btn btn-default btn-xs\">ダウンロード</a>";
+                p1.innerHTML="You need Google Chrome to use this app.<br>Please use Google Chrome<img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\">Google Chrome（Version "+this.webmidiVersion.Chrome+"） <a href=\"https://www.google.com/chrome/index.html\" target=\"_blank\" class=\"btn btn-default btn-xs\">Download</a>";
 
                 var br=document.createElement("br");
                 
@@ -116,7 +116,7 @@ CheckUserAgent.prototype={
             e0.appendChild(e1);
             
             var h2t=document.createElement("h2");
-            h2t.innerHTML="ご利用中のブラウザに関して";
+            h2t.innerHTML="Incompatible browser";
             
             var clr=document.createElement("div");
             clr.style.setProperty("margin-bottom", "30px");
@@ -124,16 +124,16 @@ CheckUserAgent.prototype={
             var eP1=document.createElement("p");
             eP1.style.setProperty("margin", "0px");
             if(this.userAgent.name=="Chrome") {
-                eP1.innerHTML="お客様は <img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\"> Google Chrome (Version "+ this.userAgent.version +") （ブラウザ）をご利用してアクセスくださっています。";
+                eP1.innerHTML="Your <img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\"> Google Chrome (Version "+ this.userAgent.version +") is outdated.";
             } else {
-                eP1.innerHTML="お客様は Google Chrome 以外（ブラウザ）をご利用してアクセス下さっています。";
+                eP1.innerHTML="You need Google Chrome to use this app.";
             }
             
             var eP2=document.createElement("p");
             if(this.userAgent.name=="Chrome" && this.userAgent.version<this.webmidiVersion[this.userAgent.name]) {
-                eP2.innerHTML="このアプリケーションをご利用いただくには <img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\">Google Chrome （Version "+this.webmidiVersion.Chrome+"）が必要です。<br> 最新版へのアップデートをお願い致します。 <a href=\"http://www.google.co.jp/intl/ja/chrome/browser/\" target=\"_blank\" class=\"btn btn-default btn-xs\">ダウンロード</a>";
+                eP2.innerHTML="You need <img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\">Google Chrome （Version "+this.webmidiVersion.Chrome+"）.<br> Please update to use this app. <a href=\"https://www.google.com/chrome/index.html\" target=\"_blank\" class=\"btn btn-default btn-xs\">Download</a>";
             } else {
-                eP2.innerHTML="<img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\">Google Chrome （Version "+this.webmidiVersion.Chrome+"） 以降でアクセスをお願い致します。 <a href=\"http://www.google.co.jp/intl/ja/chrome/browser/\" target=\"_blank\" class=\"btn btn-default btn-xs\">ダウンロード</a>";
+                eP2.innerHTML="Please use <img src=\"images/chrome_icon.png\" style=\"width:20px; margin:3px;\">Google Chrome （Version "+this.webmidiVersion.Chrome+"）. <a href=\"https://www.google.com/chrome/index.html\" target=\"_blank\" class=\"btn btn-default btn-xs\">Download</a>";
             }
             
             e2.appendChild(h2t);
