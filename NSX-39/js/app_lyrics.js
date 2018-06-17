@@ -34,7 +34,7 @@ function setUniqId(uniqId) {
 var APPID="MIKU01_"+(new Date).getTime(); // get UnixTime;
 setUniqId(APPID);
 
-var selectOneUILen=18;
+var selectOneUILen=45;
 var wordMikuFs=60;
 var maxTextInput=64;
 var dispLen={"short":3, "long":13};
