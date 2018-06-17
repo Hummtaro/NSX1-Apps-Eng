@@ -180,7 +180,7 @@ function updateAllTextSlot(mode) {
                                 if(document.querySelector("#inputMiku_"+iIdxt+""+jIdxt)!=null) {
                                     var dispL=document.querySelector("#inputMiku_"+iIdxt+""+jIdxt).value;
                                     var inputA=nsx39.acceptablePhoneticSym(dispL);
-                                    var restCount=maxTextInput-(inputA.realCount-inputA.errCount);
+                                    var restCount=maxTextInput-inputA.count;
                                     document.querySelector("#letter-count").innerText=restCount;
                                 } else {
                                     clearInterval(updateRestCountTId);
@@ -246,7 +246,7 @@ function updateAllTextSlot(mode) {
                                 var alert=false, dispL=document.querySelector("#inputMiku_"+iIdxt+""+jIdxt).value;
                                 var inputAcceptable=nsx39.acceptablePhoneticSym(dispL);
                                 var inputLC=inputAcceptable.count;
-                                var restCount=maxTextInput-(inputAcceptable.realCount-inputAcceptable.errCount);
+                                var restCount=maxTextInput-inputLC;
                                 if((restCount<0 || maxTextInput-restCount<=0 ) && btId==false) {
                                     var cnt=0;
                                     var type="zero";
@@ -262,7 +262,7 @@ function updateAllTextSlot(mode) {
                                         cnt++;
                                         var dispL=document.querySelector("#inputMiku_"+iIdxt+""+jIdxt).value;
                                         var inputA=nsx39.acceptablePhoneticSym(dispL);
-                                        var restCount=maxTextInput-(inputA.realCount-inputA.errCount);
+                                        var restCount=maxTextInput-inputA.count;
                                         switch(type) {
                                           case "exceed":
                                             if(restCount>=0) {
@@ -292,7 +292,7 @@ function updateAllTextSlot(mode) {
                                     dispAlertInSlot(alert);
                                 }
                                 var inputA=nsx39.acceptablePhoneticSym(dispL);
-                                restCount=maxTextInput-(inputA.realCount-inputA.errCount);
+                                restCount=maxTextInput-inputA.count;
                                 document.querySelector("#letter-count").innerText=restCount;                                
                             }, 5);
                         }

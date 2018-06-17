@@ -77,16 +77,6 @@ Nsx39.prototype={
         outTmp.push(Idx);
         
         var tmp=ls.replace(/ /g,"");
-
-		if(ls.substr(devide-2, 3).length==3 && typeof this.textMap[3][ls.substr(devide-2, 3)]!="undefined") {
-            tmp=ls.substr(0, devide+2);
-        }
-        else if(ls.substr(devide-1, 2).length==2 && typeof this.textMap[2][ls.substr(devide-1, 2)]!="undefined") {
-            tmp=ls.substr(0, devide+1);
-        }
-        
-        var re= new RegExp("^"+tmp);
-        ls=ls.replace(re, "");
         
         for(var j=0; j<tmp.length; j++) {
             var t;
