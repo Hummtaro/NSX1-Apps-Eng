@@ -82,7 +82,7 @@ body{
   margin:0px 140px 0px 0px; 
   width:760px; height:80px; 
   border-radius:10px; 
-  padding:10px;
+  padding:15px;
 }
 /* 
  * [css arrow please] 
@@ -161,7 +161,7 @@ body{
   width: 100%; 
   resize: vertical; 
   overflow: auto; 
-  height:37px; 
+  height:128px; 
   font-size:0.7em;
   border-bottom-right-radius:3px;
   border-bottom-left-radius:3px;
