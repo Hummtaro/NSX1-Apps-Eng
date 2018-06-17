@@ -44,9 +44,9 @@ var imeStatus="";
 var amActive=true;
 var gettingLyrics=false;
 var errMsg={
-  "AT_LEAST_ONE": "1文字以上入力してね",
-  "LETTER_EXCEED": "%%COUNT%%文字多いよ",
-  "NG_LETTER": "発音できない文字は確定時に削除するね"
+  "AT_LEAST_ONE": "Please enter at least 1 syllable.",
+  "LETTER_EXCEED": "Too many syllables: %%COUNT%%",
+  "NG_LETTER": "Characters that can not be pronounced are deleted when confirmed."
 };
 // controlCanvas for UI
 var cP=new ctrlPanel("#canvasSwBox");
@@ -158,7 +158,7 @@ function updateAllTextSlot(mode) {
             document.querySelector("#lyrics_Bd_"+i+""+j).style.removeProperty("border-color");
             document.querySelector("#lyrics_"+i+""+j).style.removeProperty("color");
             if(i==iIdx && j==jIdx) {
-                document.querySelector("#lyrics_"+iIdx+""+jIdx).innerHTML="<div id=\"input-alert\" class=\"input-alert\" style=\"display:none;\"></div><div id=\"input-info\" class=\"input-info\">残り<span id=\"letter-count\"></span>文字</div><textarea id=\"inputMiku_"+iIdx+""+jIdx+"\" class=\"inputMikuArea\">"+l+"</textarea>";
+                document.querySelector("#lyrics_"+iIdx+""+jIdx).innerHTML="<div id=\"input-alert\" class=\"input-alert\" style=\"display:none;\"></div><div id=\"input-info\" class=\"input-info\"><span id=\"letter-count\"></span> left</div><textarea id=\"inputMiku_"+iIdx+""+jIdx+"\" class=\"inputMikuArea\">"+l+"</textarea>";
                 document.querySelector("#lyrics_eb_"+iIdx+""+jIdx).style.setProperty("display", "none");
                 document.querySelector("#inputMiku_"+iIdx+""+jIdx).focus();
                 var inputAcceptable=nsx39.acceptablePhoneticSym(document.querySelector("#inputMiku_"+iIdx+""+jIdx).value);
@@ -461,10 +461,10 @@ function doReMiUIAction(mode, type) {
       case true:
         elem.className="btn btn-xs btn-info";
         elem.style.removeProperty("color");
-        var w="ドレミモードだよ";
+        var w="Do-Re-Mi Mode";
         updateDispButtonClick(96);
         updateAllTextSlot("doremi");
-        pmkUpdatewordMikuArea("ドレミモードだよ");
+        pmkUpdatewordMikuArea("Do-Re-Mi Mode");
         document.querySelector("#wordMiku").innerHTML=w;
         document.querySelector("#wordMiku").setAttribute("alt", w);
         if(type=="softB") {
