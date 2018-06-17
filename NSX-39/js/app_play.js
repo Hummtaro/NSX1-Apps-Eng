@@ -44,8 +44,8 @@ var revoiceStatus=false;
 var btId=false;
 var imeStatus;
 var errMsg={
-  "AT_LEAST_ONE": "Please enter at least 1 letter.",
-  "LETTER_EXCEED": "%%COUNT%% too many characters",
+  "AT_LEAST_ONE": "Please enter at least 1 syllable.",
+  "LETTER_EXCEED": "Too many syllables: %%COUNT%%",
   "NG_LETTER": "Characters that can not be pronounced are deleted when confirmed."
 };
 var touchStart=false;
