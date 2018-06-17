@@ -5,11 +5,11 @@
 
 var DispRegulation = function() {
     this.timerId=null;
-    this.title="繧ｨ繝ｳ繝峨Θ繝ｼ繧ｶ繝ｼ菴ｿ逕ｨ險ｱ隲ｾ螂醍ｴ�嶌";
-    this.keyName="MIKUAPP01";
+    this.title="End User License Agreement";
+    this.keyName="MIKUAPP02";
     this.instructions=[
-        '縺碑ｪｭ莠��ゅ￥縺ｨ <strong>蜷梧э縺励∪縺�</strong> 繝懊ち繝ｳ縺梧怏蜉ｹ縺ｫ縺ｪ繧翫∪縺吶�',
-        '縺碑ｪｭ莠�ｒ遒ｺ隱崎�縺励∪縺励◆縲�<strong>蜷梧э縺励∪縺�</strong> 繝懊ち繝ｳ繧偵け繝ｪ繝�け縺励♀讌ｽ縺励∩縺上□縺輔＞��'
+        'The button will be enabled after you read the agreement.',
+        'We confirmed your reading. Please click the button to agree and enjoy!'
     ];
     this.xhrDone=false;
     this.localStorage=window.localStorage;
@@ -108,7 +108,7 @@ DispRegulation.prototype = {
         
         var ctrlToU1=document.createElement("div");
         ctrlToU1.className="ctrlToU";
-        ctrlToU1.innerHTML='<input type="button" id="accept" class="btn btn-info" value="蜷梧э縺励∪縺�" disabled="disabled">';
+        ctrlToU1.innerHTML='<input type="button" id="accept" class="btn btn-info" value="Accept" disabled="disabled">';
         ctrlToU1.style.setProperty("width", "100%");
         ctrlToU1.style.setProperty("margin", "30px 0px");
         ctrlToU1.style.setProperty("text-align", "center");
