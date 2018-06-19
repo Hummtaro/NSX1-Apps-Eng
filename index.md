@@ -33,7 +33,7 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 &nbsp;
 
-### Downloads
+### File Downloads
 
 [eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Transform your Pocket Miku in a Pocket VY1 with a new, slightly softer voice.
