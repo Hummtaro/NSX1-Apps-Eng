@@ -35,10 +35,10 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 ### File Downloads
 
-[eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)<br>
+[eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip) (Windows executable)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Transform your Pocket Miku in a Pocket VY1 with a new, slightly softer voice.
 
-[ROM Utilities for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/0.1.0/NSX-39_Rom_Utils.zip)<br>
+[ROM Utilities for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/0.1.0/NSX-39_Rom_Utils.zip) (Windows executable)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Tools to read, write and erase the memory content of NSX-39 (and eVY1).
 
 &nbsp;
