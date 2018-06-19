@@ -14,13 +14,13 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 ## Apps for NSX-39
 
-**[Realtime Play](./NSX-38/realtime.html)**&nbsp;&nbsp;&nbsp;
+**[Realtime Play](./NSX-39/realtime.html)**&nbsp;&nbsp;&nbsp;
 _([Original](https://webgk.gakken.jp/otonanokagaku/nsx39/appli/02/))_
 
-**[Lyrics Preset Editor](./NSX-38/preset.html)**&nbsp;&nbsp;&nbsp;
+**[Lyrics Preset Editor](./NSX-39/preset.html)**&nbsp;&nbsp;&nbsp;
 _([Original](https://webgk.gakken.jp/otonanokagaku/nsx39/appli/01/))_
 
-**[Config Extension Pack](./NSX-38/config.html)**&nbsp;&nbsp;&nbsp;
+**[Config Extension Pack](./NSX-39/config.html)**&nbsp;&nbsp;&nbsp;
 _([Original](https://webgk.gakken.jp/otonanokagaku/nsx39/appli/00/))_
 
 **[Text Input (NSX-39 Mod)](./NSX-1/text-input.html)**&nbsp;&nbsp;&nbsp;
