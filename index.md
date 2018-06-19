@@ -44,7 +44,7 @@ _([Original](https://webmidilab.appspot.com/input/))_
 &nbsp;
 
 ### Links to other resources
-&nbsp;&nbsp;&nbsp;&nbsp;Those are not translated or modified in any form by me. I just think they are useful enought to mention.
+&nbsp;Those are not modified in any form by me. I just think they are useful enought to mention.
 
 [Lyrics convert software](https://evy1.aides-tech.com/en/download.htm)
 ([by Aides Tech](https://evy1.aides-tech.com/en/))<br>
