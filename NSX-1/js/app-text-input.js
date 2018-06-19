@@ -1,3 +1,18 @@
+// ■Chrome 66対応を追加 timestampまわりがおかしいので暫定的に 2018/05/09
+//slot select
+$(function(){
+  $('#slot a').click(function(){
+    //反映先の要素名を取得
+    var visibleTag = $(this).parents('ul').attr('visibleTag');
+    var hiddenTag = $(this).parents('ul').attr('hiddenTag');
+    //選択された内容でボタンの表示を変える
+    $(visibleTag).html($(this).attr('value'));
+    //選択された内容でhidden項目の値を変える
+    $(hiddenTag).val($(this).attr('value'));
+  })
+})
+
+
 //regulation
 var tou_url="regulations/yamaha_webapp.txt";
 var dRgl=new DispRegulation();
@@ -121,6 +136,8 @@ document.getElementById("autoDoremiMode").addEventListener("click", function(eve
     document.getElementById("inputText").setAttribute("disabled", "disabled");
     document.getElementById("inputTextButton").setAttribute("disabled", "disabled");
     document.getElementById("setletter").innerHTML=" --";
+    document.getElementById("setletterSysx").innerHTML=" --";//●
+    document.getElementById("setletterSysxHex").innerHTML=" --";//●
     document.getElementById("modeName").innerHTML="<span class=\"glyphicon glyphicon-music\"></span> DoReMi</span>";
 });
 
@@ -132,6 +149,12 @@ navigator.requestMIDIAccess( { sysex: true } ).then( scb, ecb );
 
 function scb(access){
     var midi=access;
+    /*
+    inputs=midi.inputs();
+    outputs=midi.outputs();
+    */
+
+    //ここから 追加
     if (typeof midi.inputs === "function") {
         inputs=midi.inputs();
         outputs=midi.outputs();
@@ -147,6 +170,7 @@ function scb(access){
             outputs.push(o.value)
         }
     }
+    //ここまで
 
     // MIDI IN
     var mi=document.getElementById("midiInSel");
@@ -207,6 +231,11 @@ function scb(access){
         // in modal
         mo.options[i]=new Option(outputs[i]["name"], i);
     }
+    for(var i=0; i<outputs.length; i++) {
+      if(mo.options[i].text.match(/NSX-39|eVY1/)){
+        mo.options.selectedIndex = i;
+      }
+    }
     // set device in modal
     document.getElementById("midiOutSelB").addEventListener("click", function(){
         var selIdx=document.getElementById("midiOutSel").selectedIndex;
@@ -249,30 +278,78 @@ function scb(access){
         };
         fKey.noteOff=function(noteNo) {
             var now=window.performance.now();
-            mOut.send([0x80, noteNo, 0x00], now+200);
+            //mOut.send([0x80, noteNo, 0x00], now+200);
+            mOut.send([0x80, noteNo, 0x00]);  // ■Chrome 66 暫定対応 2018/05/09
         };
     });
     
     // send text to NSX-1
     document.getElementById("inputTextButton").addEventListener("click", function(){
+
+        /* ●出力存在チェック  外す
         // check whether midi out is set or not
         if(typeof mOut!="object") {
             showMidiInOutSelM("divMidiOutSelWarning", "OUT", "resetAllController");
             return;
         }
+        */
 
         var text=document.getElementById("inputText").value;
-        var sysEx=nsx1.getSysExByText(text);
+        var sysEx=nsx1.getSysExByText(text);//   console.log(sysEx);//●配列
+
+        //●nsx39
+        var slotNum;
+        if($("#visibleValue").text() == "slot"){
+           slotNum = 0;
+        } else {
+           console.log("#visibleValue: " + $("#visibleValue").text());
+           slotNum = parseInt($("#visibleValue").text(),10);
+        }
+
+        //console.log("Slot Number: " + slotNum);
+        var sysEx39=nsx39.getUpdateSysExByText(text, 0, true);
+        var sysEx39c = Array();
+            sysEx39c[0] = sysEx39["sysEx"];
+            sysEx39c[0][6] = slotNum;
+
+
+
+        //●元のやつ
         var now=window.performance.now();
         for(var i=0; i<sysEx.length; i++) {
-            mOut.send(sysEx[i], now+i*10);
+
+            if(typeof mOut=="object") { //●出力存在チェック追加
+              mOut.send(sysEx[i], now+i*20);//●＊10
+            }
             var s16="";
             for(var j=0; j<sysEx[i].length; j++) {
-                s16 = s16 + " " + sysEx[i][j].toString(16);
+                s16 = s16 + " " + ("0" + sysEx[i][j].toString(16).toUpperCase()).substr(-2);
             }
-
+            //console.log("sysExorg: " + sysEx);//console.log(sysEx);
+            //console.log("s16org: " + s16);
         }
+
+        //●39 
+        var now=window.performance.now();
+        for(var i=0; i<sysEx39c.length; i++) {// console.log(sysEx39c.length);
+            if(typeof mOut=="object") { //●出力存在チェック
+              //mOut.send(sysEx39c[i], now+i*20);//●＊10
+              mOut.send(sysEx39c[i]);//●＊10  －－－－－－－－－－－－－－－－ ■Chrome 66対応 2018/05/09
+            }
+            var s16_39="";
+            for(var j=0; j<sysEx39c[i].length; j++) {
+                s16_39 = s16_39 + " " + ("0" + sysEx39c[i][j].toString(16).toUpperCase()).substr(-2);
+            }
+            //console.log("sysEx39c: " + sysEx39c);
+            //console.log("s16_39: " + s16_39);
+        }
+
         document.getElementById("setletter").innerHTML=text;
+        document.getElementById("setletterSysx").value=sysEx;//●Sysex表示
+        document.getElementById("setletterSysxHex").value=s16;//●Sysex16進数表示
+        document.getElementById("setletterSysx39").value=sysEx39c;//●Sysex表示
+        document.getElementById("setletterSysxHex39").value=s16_39;//●Sysex16進数表示
+
     });
 
 }
