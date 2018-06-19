@@ -28,7 +28,7 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 &nbsp;
 
-## Other Stuff
+### Other Stuff
 
 [eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)
 
