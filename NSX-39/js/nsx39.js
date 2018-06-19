@@ -76,7 +76,7 @@ Nsx39.prototype={
         outTmp=[];
         outTmp.push(Idx);
         
-        var tmp=ls.replace(/ /g,"");
+        var tmp=ls.toLowerCase().replace(/ /g,"");
         
         for(var j=0; j<tmp.length; j++) {
             var t;
@@ -156,7 +156,7 @@ Nsx39.prototype={
         return arOut;
     },
     acceptablePhoneticSym: function(w) {
-        var sysExC=this.getUpdateSysExByText(w, 0, false);
+        var sysExC=this.getUpdateSysExByText(w.toLowerCase(), 0, false);
         var sysEx=sysExC.sysEx;
         var aw=this.getTextBySysEx(sysEx, 0);
         // -2: d0, slotNo
