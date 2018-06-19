@@ -2,6 +2,13 @@
 layout: default
 ---
 
+Here you will find some apps and stuff for Pocket Miku and other NSX-1 devices like eVY1.<br>
+All Apps are translated and modified to input japanese lyrics in romaji.<br>
+
+You need Google Chrome or Chromium to use those apps.
+
+&nbsp;
+
 ## Apps for NSX-1
 
 **[Single Track DAW](./NSX-1/single-track-daw.html)**&nbsp;&nbsp;&nbsp;
@@ -30,8 +37,10 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 ### Other Stuff
 
-[eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)
+[eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Transform your Pocket Miku in a Pocket VY1 with a new, slightly softer voice.
 
-[ROM Utilities for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/0.1.0/NSX-39_Rom_Utils.zip)
+[ROM Utilities for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/0.1.0/NSX-39_Rom_Utils.zip)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tools to read, write and erase the memory content of NSX-39 (and eVY1).
 
 &nbsp;
