@@ -30,8 +30,8 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 ## Other Stuff
 
-**[eVY1 Voice Bank for NSX-39](hhttps://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)
+[eVY1 Voice Bank for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/1.0.0/NSX-39_Voice.zip)
 
-**[ROM Utilities for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/0.1.0/NSX-39_Rom_Utils.zip)
+[ROM Utilities for NSX-39](https://github.com/Hummtaro/NSX1-Apps-Eng/releases/download/0.1.0/NSX-39_Rom_Utils.zip)
 
 &nbsp;
