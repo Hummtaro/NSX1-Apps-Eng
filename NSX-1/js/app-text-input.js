@@ -232,7 +232,7 @@ function scb(access){
         mo.options[i]=new Option(outputs[i]["name"], i);
     }
     for(var i=0; i<outputs.length; i++) {
-      if(mo.options[i].text.match(/NSX-39|eVY1/)){
+      if(mo.options[i].text.match(/NSX-39|eVY1|NSX-VY1/)){
         mo.options.selectedIndex = i;
       }
     }
@@ -294,7 +294,7 @@ function scb(access){
         }
         */
 
-        var text=document.getElementById("inputText").value;
+        var text=a2j(document.getElementById("inputText").value);
         var sysEx=nsx1.getSysExByText(text);//   console.log(sysEx);//●配列
 
         //●nsx39

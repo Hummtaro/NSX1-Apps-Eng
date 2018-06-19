@@ -227,7 +227,7 @@ document.getElementById("inputTextButton").addEventListener("click", function(){
         return;
     }
 
-    var text=document.getElementById("inputText").value;
+    var text=a2j(document.getElementById("inputText").value);
     var sysEx=nsx1.getSysExByText(text);
     var now=window.performance.now();
     for(var i=0; i<sysEx.length; i++) {

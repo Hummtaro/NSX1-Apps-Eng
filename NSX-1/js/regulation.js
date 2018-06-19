@@ -3,8 +3,8 @@ var DispRegulation = function() {
     this.title="Terms of Use";
     this.keyName="TIAPP";
     this.instructions=[
-        'ご読了頂くと <strong>同意します</strong> ボタンが有効になります。',
-        'ご読了を確認致しました。<strong>同意します</strong> ボタンをクリックしお楽しみください！'
+        'The button will be enabled after you read the agreement.',
+        'We confirmed your reading. Please click the button to agree and enjoy!'
     ];
     this.xhrDone=false;
     this.localStorage=window.localStorage;
@@ -86,7 +86,7 @@ DispRegulation.prototype = {
         
         var ctrlToU1=document.createElement("div");
         ctrlToU1.className="ctrlToU";
-        ctrlToU1.innerHTML='<input type="button" id="accept" class="btn btn-info" value="同意します" disabled="disabled">';
+        ctrlToU1.innerHTML='<input type="button" id="accept" class="btn btn-info" value="Accept" disabled="disabled">';
         ctrlToU1.style.setProperty("width", "100%");
         ctrlToU1.style.setProperty("margin", "30px 0px");
         ctrlToU1.style.setProperty("text-align", "center");

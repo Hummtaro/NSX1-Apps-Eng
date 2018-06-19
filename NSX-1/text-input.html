@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=880">
-    <title>Text Input 39 - ポケミク対応改造版テキスト入力アプリ</title>
+    <title>Text Input 39 - Modified for Pocket Miku</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
     <style type="text/css">
@@ -133,7 +133,7 @@
                   <input type="hidden" class="form-control" id="hiddenValue" value="0" size="2">
                 </div><!-- /input-btn-group -->
 
-                <input type="text" class="form-control" id="inputText" placeholder="Input Text" value="ぽけみく">
+                <input type="text" class="form-control" id="inputText" placeholder="Input Text" value="po ke mi ku">
                 <span class="input-group-btn">
                   <button class="btn btn-primary" type="button" id="inputTextButton">Send</button>
                 </span>
@@ -233,7 +233,7 @@
               <textarea id="regContent" style="width:600px; height:260px;"></textarea>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -247,7 +247,7 @@
       <div class="container">
         <p class="text-muted credit">
 
-          <a href="http://yamaha-webmusic.github.io/nsx1-apps/manual/" target="_blank">Original Version by YAMAHA</a> / <a href="http://pointofviewpoint.air-nifty.com/blog/2014/05/android---web-m.html" target="_blank">説明 </a>
+          <a href="http://yamaha-webmusic.github.io/nsx1-apps/manual/" target="_blank">Original Version by YAMAHA</a> / <a href="http://pointofviewpoint.air-nifty.com/blog/2014/05/android---web-m.html" target="_blank">Info </a>
  / <a href="/" >BACK </a>
 
 <!--
@@ -273,6 +273,7 @@
             {"type":"text/javascript", "script":"js/flatKeyboard.js"},
             {"type":"text/javascript", "script":"js/regulation.js"},
             {"type":"text/javascript", "script":"js/apptouch.js"},
+            {"type":"text/javascript", "script":"js/a2j.js"},
             {"type":"text/javascript", "script":"js/app-text-input.js"}
         ];
         var counter = 0;//●load end
