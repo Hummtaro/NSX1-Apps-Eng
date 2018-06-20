@@ -2,8 +2,8 @@
 layout: default
 ---
 
-Here you will find some apps and stuff for Pocket Miku and other NSX-1 devices like eVY1.<br>
-All Apps are translated and modified to input japanese lyrics in roman letters (romaji).<br>
+Here you will find some apps and stuff for Pocket Miku and other NSX-1 devices like eVY1 or Vocaloop.<br>
+All Apps have been translated and modified to input japanese lyrics in roman letters (romaji).<br>
 
 You need Google Chrome or Chromium to use these apps.
 
