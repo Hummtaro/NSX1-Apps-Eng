@@ -36,7 +36,7 @@ _([Original](https://webmidilab.appspot.com/input/))_
 ### File Downloads
 
 [eVY1 Voice Bank for NSX-39](http://www.mediafire.com/file/rr0r0nn420e6lqj/NSX-39_Voice.zip) (Windows executable)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Transform your Pocket Miku in a Pocket VY1 with a new, slightly softer voice.
+&nbsp;&nbsp;&nbsp;&nbsp;Transform your Pocket Miku in a Pocket VY1 with a new voice.
 
 [ROM Utilities for NSX-39](http://www.mediafire.com/file/9b259bll2xl13lx/NSX-39_Rom_Utils.zip) (Windows executable)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Tools to read, write and erase the memory content of NSX-39 (and eVY1).
@@ -45,6 +45,10 @@ _([Original](https://webmidilab.appspot.com/input/))_
 
 ### Links to other resources
 &nbsp;Those are not modified in any form by me. I just think they are useful enought to mention.
+
+[English booklet](http://www.adafruit.com/pdfs/pocket_miku.pdf)
+([by Adafruit](https://www.adafruit.com/product/2332))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Just a translated booklet as PDF.
 
 [Lyrics convert software](https://evy1.aides-tech.com/en/download.htm)
 ([by Aides Tech](https://evy1.aides-tech.com/en/))<br>
